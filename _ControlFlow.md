@@ -1,4 +1,4 @@
-
+### 1. Conditional Statements (if, elif, else)
 
 ```python
 x = 10
@@ -11,7 +11,8 @@ else:
     print("Negative")
 ```
 
-
+###  2. Loops
+FOR LOOP -
 ```python
 fruits = ["apple", "banana", "cherry"]
 for fruit in fruits:
@@ -20,12 +21,14 @@ for fruit in fruits:
 for i in range(5):
     print(i)
 ```
+WHILE LOOP -
 ```python
 count = 0
 while count < 5:
     print(count)
     count += 1
 ```
+BREAK VS CONTINUE -
 ```python
 for i in range(10):
     if i == 5:
@@ -44,6 +47,15 @@ for i in range(5):
 for i in range(3):
     pass 
 ```
-```python
 
+```python
+command = "start"
+
+match command:
+    case "start":
+        print("System starting")
+    case "stop":
+        print("System stopping")
+    case _:
+        print("Unknown command")
 ```

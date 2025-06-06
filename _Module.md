@@ -1,16 +1,51 @@
-A file containing a set of functions you want to include in your application.
+What is a Module?  
+A module is a Python file (.py) that contains functions, classes, or variables — designed to be reused in other programs.
 
-Use a Module  
+Why Use Modules?  
+Code reusability, 
+Better organization (cleaner files), 
+Easy collaboration, 
+Built-in and third-party power tools
+
+---
+### 1. Built-in Modules
+Pre-installed with Python,  
+for eg math, datetime, random, os
 ```python
+import math
+print(math.sqrt(25))  # 5.0
+```
+
+---
+### 2. User-defined Modules
+customized .py files  
+
+Create a file named mymodule.py
+```python
+# mymodule.py
+def greet(name):
+    return "Hello" + name
+    
+# In other file
 import mymodule
-mymodule.fun()
+print(mymodule.greet("Ayush"))  # Hello Ayush
 ```
+---
 
-There is a built-in function to list all the function names (or variable names) in a module. The dir() functio
-
+### 3. External Modules
+Installed using pip  
+For eg numpy, requests, pandas
+```bash
+pip install pandas
+```
 ```python
-import platform
 
-x = dir(platform)
-print(x)
 ```
+
+## <center> 
+| Syntax                    | Description                         |
+| ------------------------- | ----------------------------------- |
+| `import module`           | Imports whole module                |
+| `import module as alias`  | Use alias name                      |
+| `from module import func` | Import specific item                |
+| `from module import *`    | Import everything (not recommended) |

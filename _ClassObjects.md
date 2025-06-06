@@ -14,8 +14,9 @@ which is always executed when the class is being initiated
 
 ```python
 class Person:
+
   def __init__(self, name, age):
-    self.name = name
+    self.name = name 
     self.age = age
 
 
@@ -26,6 +27,23 @@ print(p1.age)
 > The self parameter is a reference to the current instance of the class, and is used to access variables that belong to the class.  
 > It does not have to be named self, you can call it whatever you like, but it has to be the first parameter of any function in the class:
 
+---
+
+### Instance vs Class Variables
 ```python
-del p1.age
+class Dog:
+  species = "Canis familiaris"  # Class variable
+  
+  def __init__(self, name):
+  self.name = name  # Instance variable
+
+dog1 = Dog("Buddy")
+dog2 = Dog("Max")
+
+print(dog1.species)  # Canis familiaris
+print(dog2.species)  # Canis familiaris
+print(dog1.name)     # Buddy
+print(dog2.name)     # Max
 ```
+Class variables are shared by all instances.  
+Instance variables are unique to each object
